@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TechRequest</title>
+<meta name="theme-color" content="#4f46e5">
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TechRequest">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+  <button class="ib" id="back" onclick="history.back()" hidden>‹</button>
+  <div class="logo">⚡ TechRequest</div>
+  <button class="ib" onclick="A.swap()" title="Alternar usuário demo (comprador/vendedor)">⇄</button>
+  <button class="ib" onclick="A.theme()" title="Modo claro/escuro">🌓</button>
+  <button class="ib" onclick="go('notifs')" title="Notificações">🔔<span class="badge" id="bell" hidden>0</span></button>
+</header>
+<main id="view"></main>
+<nav>
+  <a href="#/home" data-r="home">🏠<span>Início</span></a>
+  <a href="#/requests" data-r="requests">📋<span id="tabreq">Solicitações</span></a>
+  <a href="#/proposals" data-r="proposals">💼<span>Propostas</span></a>
+  <a href="#/chats" data-r="chats">💬<span>Conversas</span></a>
+  <a href="#/profile" data-r="profile">👤<span>Perfil</span></a>
+</nav>
+<div id="modal"></div><div id="toast"></div>
+<script src="./js/storage.js"></script>
+<script src="./js/data.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
