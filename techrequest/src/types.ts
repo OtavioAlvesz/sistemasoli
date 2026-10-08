@@ -1,0 +1,5 @@
+export const CATEGORIES = ['Processadores','Placas de vídeo','Placas-mãe','Memória RAM','SSD','HD','Fontes','Gabinetes','Coolers','Monitores','Teclados','Mouses','Headsets','Notebooks','Celulares','Cabos','Adaptadores','Periféricos','Componentes de rede','Outros'];
+export type Profile = { id: string; name: string; role: 'comprador'|'vendedor'; store_name?: string; store_description?: string; location?: string; rating?: number };
+export type Request = { id: string; buyer_id: string; category: string; title: string; quantity: number; specs?: string; notes?: string; budget?: number; image_url?: string; status: string; created_at: string };
+export type Proposal = { id: string; request_id: string; seller_id: string; product: string; price: number; quantity: number; delivery_days?: number; payment_terms?: string; notes?: string; status: string; created_at: string; seller?: Profile; request?: Request };
+export type Message = { id: string; proposal_id: string; sender_id: string; body?: string; image_url?: string; read: boolean; created_at: string };
